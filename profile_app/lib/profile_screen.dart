@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:profile_app/star.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen
@@ -32,13 +33,21 @@ Widget _buildProfileDetails(BuildContext context){
     return Padding(
       padding: EdgeInsets.all(20),
       child: Column(
-       crossAxisAlignment: CrossAxisAlignment.start,
+       crossAxisAlignment: CrossAxisAlignment.center,
        children:[
        Text("Enkhbileg Enkhbayar",
        style: TextStyle(
         fontSize: 35,
         fontWeight: FontWeight.w600
        ),
+       ),
+       Row(
+         children: [
+           Star(color:Color.fromARGB(143, 255, 0, 0), size: 40 ),
+            Star(color:Color.fromARGB(143, 122, 169, 212), size: 40 ),
+             Star(color:Color.fromARGB(143, 60, 85, 248), size: 40 ),
+              Star(color:Color.fromARGB(143, 144, 95, 205), size: 40 ),
+         ],
        ),
               _buildDetailsRow('AGE','13'),
               _buildDetailsRow('Status', 'Good')
